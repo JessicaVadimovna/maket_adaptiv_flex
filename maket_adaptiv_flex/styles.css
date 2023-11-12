@@ -1,0 +1,138 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #ffffff;
+    font-family: 'Arial', 'Helvetica', 'sans-serif';
+    font-size: 1em;
+    font-style: normal;
+}
+
+.container-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background: #e7e7e7;
+    color: #0f0f0f;
+    width: 100%;
+    height: 5em;
+}
+
+.container-main {
+    display: flex;
+    flex-direction: row;
+    background: #faf7e6;
+    color: #111111;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.part1 {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 1vh;
+    justify-content: left;
+    align-items: stretch;
+}
+
+.part2 {
+    display: flex;
+}
+
+.row1,
+.row2,
+.row3 {
+    flex: 1;
+    background-color: #faf3ce;
+    margin: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar {
+    float: right;
+    background: #cbeecb;
+    padding: 10%;
+    margin: 0;
+    text-align: center;
+    width: 20%;
+}
+
+.footer {
+    background: #e7e7e7;
+    color: #000000;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.footer-section {
+    background: #ffffff;
+    padding: 1em;
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+}
+
+/* Медиа-запрос для телефона в портретной ориентации */
+@media only screen and (max-width: 480px) {
+.part1 {
+    flex-direction: column;
+    width: 100%;
+}
+
+.sidebar {
+    display: none;
+}
+
+.footer {
+    flex-direction: column;
+}
+}
+
+
+/* Медиа-запрос для планшета в портретной ориентации */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+.part1 {
+    flex-direction: column;
+    width: 60%;
+}
+
+.sidebar {
+    display: none;
+}
+
+.footer {
+    flex-direction: column;
+}
+}
+
+/* Медиа-запрос для планшета в альбомной ориентации и компьютера */
+@media only screen and (min-width: 769px) {
+.row1,
+.row2,
+.row3 {
+    flex: 2;
+}
+}
+
+/* Медиа-запрос для landscape */
+@media only screen and (orientation: landscape) {
+.container-main {
+    flex-direction: row;
+}
+
+.part1 {
+    width: 80%;
+}
+
+.sidebar {
+    width: 20%;
+}
+}
